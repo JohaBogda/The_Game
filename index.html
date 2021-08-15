@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<h1>The War of Elemnts</h1> 
+<h1>The War of Elements</h1> 
 
-<div>Player vs Mr. Robot</div>
+<div><span id="playerName">Player</span> vs Mr. Robot</div>
 
 <div class="score board">
     <span id="player-score">0</span>:<span id="robot-score">0</span>
@@ -24,7 +24,11 @@
     <button id="water" onclick="selectScissors()">Water</button>
 </div> <!--section for 3 buttons: rock paper or scissor to choose from-->
 
-<div>GLOSSARY</div> <!--section explaining what option trumps the others-->
+<pre>
+Water > Fire > Wind
+Fire > Wind > Water
+Wind > Water > Fire
+</pre> <!--section explaining what option trumps the others-->
 
     <script src="app.js"></script>
 

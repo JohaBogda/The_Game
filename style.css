@@ -1,7 +1,22 @@
 body { /*everything in the center with padding */
    text-align: center;
-   /*background-color: ; 
-   color: ; */
+   background-color: black; 
+   color: white;
+}
+
+h1 { 
+    font-family: monospace;
+    font-size: 250%;
+    /*gradient color scheme*/
+    background: -webkit-linear-gradient(#eee, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div{
+    font-style: oblique;
+    color: rgb(172, 166, 166);
+    padding: 5px;
 }
 
 button{
@@ -9,3 +24,8 @@ button{
     cursor: pointer;
     /*transition: 300s;*/
 }
+
+pre{
+    font-size: 10%;
+}
+
