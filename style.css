@@ -1,0 +1,11 @@
+body { /*everything in the center with padding */
+   text-align: center;
+   /*background-color: ; 
+   color: ; */
+}
+
+button{
+    border-radius: 50%;
+    cursor: pointer;
+    /*transition: 300s;*/
+}

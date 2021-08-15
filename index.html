@@ -9,14 +9,19 @@
 </head>
 <body>
 
-<h1>Rock Paper Scissor</h1> 
+<h1>The War of Elemnts</h1> 
 
-<div></div> <!--section for name of player vs Mr. Robot; chosen option & the score-->
+<div>Player vs Mr. Robot</div>
+
+<div class="score board">
+    <span id="player-score">0</span>:<span id="robot-score">0</span>
+
+</div>
 
 <div>
-    <button onclick="runFunction()">ROCK</button>
-    <button onclick="runFunction()">PAPER</button>
-    <button onclick="runFunction()">SCISSORS</button>
+    <button id="fire" onclick="selectFire()">Fire</button>
+    <button id="wind" onclick="selectWind()">Wind</button>
+    <button id="water" onclick="selectScissors()">Water</button>
 </div> <!--section for 3 buttons: rock paper or scissor to choose from-->
 
 <div>GLOSSARY</div> <!--section explaining what option trumps the others-->
