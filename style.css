@@ -1,31 +1,48 @@
-body { /*everything in the center with padding */
+body {
+    width: 100%;
    text-align: center;
-   background-color: black; 
+   background-image: url(background.jpeg); 
    color: white;
-}
+   }
 
 h1 { 
     font-family: monospace;
     font-size: 250%;
     /*gradient color scheme*/
-    background: -webkit-linear-gradient(#eee, #000);
+    background: -webkit-linear-gradient(#eee, rgb(65, 16, 16));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 div{
-    font-style: oblique;
-    color: rgb(172, 166, 166);
-    padding: 5px;
+    font-weight: bolder;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: rgb(56, 46, 46);
+    padding: 10px;
+}
+
+.scoreBoard {
+border: 1px solid;
+border-radius: 5px;
+box-shadow: 1px 1px 1px rgb(65, 57, 57);
+width: 10%;
+margin: auto;
 }
 
 button{
     border-radius: 50%;
     cursor: pointer;
+    margin: 5px;
+    padding: 15px;
+    border-color: rgb(104, 34, 34);
     /*transition: 300s;*/
 }
 
 pre{
     font-size: 10%;
+    border: 3px dashed rgb(161, 84, 75);
+    padding: 5px;
+    width: 20%;
+    margin: auto;
 }
 

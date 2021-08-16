@@ -11,23 +11,25 @@
 
 <h1>The War of Elements</h1> 
 
-<div><span id="playerName">Player</span> vs Mr. Robot</div>
+<div>
+    <form><input type ="text" /></form> vs Earth</div>
 
-<div class="score board">
-    <span id="player-score">0</span>:<span id="robot-score">0</span>
+<div class="scoreBoard">
+    <span id="playerScore">0</span>:<span id="robotScore">0</span>
 
 </div>
+
+<br>
 
 <div>
     <button id="fire" onclick="selectFire()">Fire</button>
     <button id="wind" onclick="selectWind()">Wind</button>
-    <button id="water" onclick="selectScissors()">Water</button>
+    <button id="water" onclick="selectWater()">Water</button>
 </div> <!--section for 3 buttons: rock paper or scissor to choose from-->
 
 <pre>
 Water > Fire > Wind
-Fire > Wind > Water
-Wind > Water > Fire
+Wind > Water
 </pre> <!--section explaining what option trumps the others-->
 
     <script src="app.js"></script>

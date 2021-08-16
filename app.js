@@ -1,9 +1,10 @@
-const rock = 1;
-const paper = 2;
-const scissors = 3;
+const playerScore = document.querySelector("playerScore")
+const robotScore = document.querySelector("robotScore")
 
 
 function playerTurn() {
+
+
 
     console.log('hey we clicked a button with a value X')
     // do logic here, save value in a variable
@@ -17,11 +18,9 @@ function playerTurn() {
      if(Math.floor(Math.random()*max) === 1){
           console.log("computer chose rock")
       }
-
       else if(Math.floor(Math.random()*max) === 2){
               console.log("computer chose paper")
         }
-
         else{
             console.log("computer chose scissors")
         }
