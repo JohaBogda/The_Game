@@ -1,6 +1,10 @@
 const playerScore = document.querySelector("#playerScore")
 const earthScore = document.querySelector("#earthScore")
 
+const fireButton = document.querySelector("fire")
+const windButton = document.querySelector("wind")
+const waterButton = document.querySelector("water")
+
 let playerName = document.querySelector(".playerName")
 function playerNameSelect(){
   var newPlayer =  prompt("What's your name?")
@@ -9,12 +13,27 @@ function playerNameSelect(){
 }
 playerNameSelect()
 
-// while i for either players is <=3 (they need to win 3 out of 5) continue playing
+// while i for either players is <=3 (they need to win 3 out of 5), continue playing
 // 
 // player selects either fire, wind, or water
 
 // when player selects fire, run computerTurn to have computer select an element; 
 //      if computer selects water, #earthScore ++
+//      if computer selects wind, #playerScore ++
+//      else remains the same
+
+// when player selects wind, run computerTurn to have computer select an element; 
+//      if computer selects water, #playerScore ++
+//      if computer selects fire, #earthScore ++
+//      else remains the same
+
+// when player selects water, run computerTurn to have computer select an element; 
+//      if computer selects wind, #playerScore ++
+//      if computer selects fire, #earthScore ++
+//      else remains the same
+
+// GOAL: once either score = 3 the person wins/ ends the loop
+
 
 
 function playerTurn() { // each time player selects a button
