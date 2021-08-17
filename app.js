@@ -1,5 +1,5 @@
-const playerScore = document.querySelector("#playerScore")
-const earthScore = document.querySelector("#earthScore")
+const playerScore = document.querySelector(".playerScore")
+const earthScore = document.querySelector(".earthScore")
 
 const fireButton = document.querySelector("#fire")
 const windButton = document.querySelector("#wind")
@@ -72,5 +72,5 @@ function computerTurn() {
            //console.log("computer chose water")
        }
  }
- //computerTurn() //put inside of playerTurn function to run each time player clicks a button
+ computerTurn() //put inside of playerTurn function to run each time player clicks a button
   
