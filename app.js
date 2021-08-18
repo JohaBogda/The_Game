@@ -1,5 +1,5 @@
 // have to add this in order to have it start at 0
-let userScoreZero = 0 
+let playerScoreZero = 0 
 let earthScoreZero = 0
 
 // select from HTML so we can work on the JS with selected elements
@@ -24,20 +24,30 @@ playerNameSelect()
 function computerTurn() {
     if(Math.floor(Math.random()*3) === 1){
          console.log("computer chose fire")
+         return "fire"
      }
      else if(Math.floor(Math.random()*3) === 2){
         console.log("computer chose wind")
+        return "wind"
        }
-       else if(Math.floor(Math.random()*3) ===3){
+       else{
            console.log("computer chose water")
+           return "water"
        }
  }
  //computerTurn() >>> put inside of playerTurn function to run each time player clicks a button
 
 // function needed for when earth wins = earthScore++
 function earthScores() {
-    earthScoreZero++
-    earthScoreZero = earthScore.innerHTML
+    earthScoreZero++;
+    console.log(earthScoreZero)
+    earthScore.innerHTML = earthScoreZero
+}
+
+function playerScores(){
+    playerScoreZero++;
+    console.log(playerScoreZero)
+    playerScore.innerHTML = playerScoreZero
 }
 
 // NOTES: 
@@ -57,14 +67,18 @@ function earthScores() {
 
         // player selects either fire, wind, or water
         fireButton.addEventListener("click", function(){
-            computerTurn()
+           let computerChoice = computerTurn()
         // when player selects fire, run computerTurn to have computer select an element; 
         // if computer selects water, #earthScore ++
         // if computer selects wind, #playerScore ++
         // else remains the same
-                if(computerTurn === 3) {
-                console.log("Earth chose water & scores")
+                if(computerChoice === "water") {
+                console.log("Computer chose water & scores against fire")
                 earthScores()
+                }
+                else if(computerChoice === "wind"){
+                    console.log("Computer chose wind & loses against fire")
+                    playerScores()
                 }
         console.log("Player clicked fire");
         }
