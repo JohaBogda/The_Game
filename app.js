@@ -1,5 +1,5 @@
-const playerScore = document.querySelector(".playerScore")
-const earthScore = document.querySelector(".earthScore")
+const playerScore = document.querySelector("#playerScore")
+const earthScore = document.querySelector("#earthScore")
 
 const fireButton = document.querySelector("#fire")
 const windButton = document.querySelector("#wind")
@@ -12,15 +12,20 @@ function playerNameSelect(){ // create a function for player to input their name
   playerName.innerHTML = newPlayer // have whatever is input into the prompt show up in the playerName spot 
 }
 playerNameSelect()
+console.log(playerScore) //to check if it's working in the console
 
-// while i for either players is <=3 (they need to win 3 out of 5), continue playing
-// 
-// player selects either fire, wind, or water
-
-// when player selects fire, run computerTurn to have computer select an element; 
-//      if computer selects water, #earthScore ++
-//      if computer selects wind, #playerScore ++
-//      else remains the same
+function computerTurn() {
+    if(Math.floor(Math.random()*3) === 1){
+         console.log("computer chose fire")
+     }
+     else if(Math.floor(Math.random()*3) === 2){
+        console.log("computer chose wind")
+       }
+       else{
+           console.log("computer chose water")
+       }
+ }
+ //computerTurn() //put inside of playerTurn function to run each time player clicks a button
 
 // when player selects wind, run computerTurn to have computer select an element; 
 //      if computer selects water, #playerScore ++
@@ -34,17 +39,34 @@ playerNameSelect()
 
 // GOAL: once either score = 3 the person wins/ ends the loop
 
-fireButton.addEventListener("click", function(){
-    console.log("Player clicked fire");
-})
+// function entireFunction() {
+//     while(i=0, i<=3, i++){ // while i for either players is <=3 (they need to win 3 out of 5), continue playing
 
-windButton.addEventListener("click", function(){
-    console.log("Player clicked wind");
-})
+        // player selects either fire, wind, or water
+        fireButton.addEventListener("click", function(){
+            computerTurn()
+        // when player selects fire, run computerTurn to have computer select an element; 
+        // if computer selects water, #earthScore ++
+        // if computer selects wind, #playerScore ++
+        // else remains the same
+            if(computerTurn === 3) {
+                console.log(earthScore++);
+                console.log("earth scores")
+            }
 
-waterButton.addEventListener("click", function(){
-    console.log("Player clicked water");
-})
+        console.log("Player clicked fire");
+        })
+
+        windButton.addEventListener("click", function(){
+        console.log("Player clicked wind");
+        })
+
+        waterButton.addEventListener("click", function(){
+        console.log("Player clicked water");
+        })
+  //  }
+//}
+// entireFunction()
 
 // function playerTurn() { // each time player selects a button
 //     while(i =0, i<=3, i++){ // while player hasn't won 3 out of 5 games 
@@ -61,16 +83,5 @@ waterButton.addEventListener("click", function(){
 // }
 // playerTurn()
 
-function computerTurn() {
-    if(Math.floor(Math.random()*3) === 1){
-         //console.log("computer chose fire")
-     }
-     else if(Math.floor(Math.random()*3) === 2){
-             //console.log("computer chose wind")
-       }
-       else{
-           //console.log("computer chose water")
-       }
- }
- computerTurn() //put inside of playerTurn function to run each time player clicks a button
+
   
