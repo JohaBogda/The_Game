@@ -104,6 +104,16 @@ function playerScores(){
 
         // player selects either water
         waterButton.addEventListener("click", function(){
+            let computerChoice = computerTurn()
+       
+            if(computerChoice === "wind") {
+            console.log("Computer chose fire & scores against water")
+            earthScores()
+            }
+            else if(computerChoice === "fire"){
+                console.log("Computer chose water & loses against water")
+                playerScores()
+            }
         console.log("Player clicked water");
         })
   //  }
