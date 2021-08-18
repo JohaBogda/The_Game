@@ -65,13 +65,15 @@ function playerScores(){
 // function entireFunction() { // GOAL: once either score = 3 the person wins/ ends the loop
 //     while(i=0, i<=3, i++){ // while i for either players is <=3 (they need to win 3 out of 5), continue playing
 
-        // player selects either fire, wind, or water
+        // player selects either fire
         fireButton.addEventListener("click", function(){
-           let computerChoice = computerTurn()
-        // when player selects fire, run computerTurn to have computer select an element; 
-        // if computer selects water, #earthScore ++
-        // if computer selects wind, #playerScore ++
-        // else remains the same
+
+            // when player selects fire, run computerTurn to have computer select an element; 
+            // if computer selects water, #earthScore ++
+            // if computer selects wind, #playerScore ++
+            // else remains the same
+           let computerChoice = computerTurn() // need to make computerTurn a variable to call upon the different options below
+       
                 if(computerChoice === "water") {
                 console.log("Computer chose water & scores against fire")
                 earthScores()
@@ -84,10 +86,23 @@ function playerScores(){
         }
         )
 
+        // player selects either wind
         windButton.addEventListener("click", function(){
+            let computerChoice = computerTurn()
+       
+            if(computerChoice === "fire") {
+            console.log("Computer chose fire & scores against wind")
+            earthScores()
+            }
+            else if(computerChoice === "water"){
+                console.log("Computer chose water & loses against wind")
+                playerScores()
+            }
         console.log("Player clicked wind");
-        })
+        }
+        )
 
+        // player selects either water
         waterButton.addEventListener("click", function(){
         console.log("Player clicked water");
         })
