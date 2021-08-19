@@ -63,33 +63,64 @@ button:hover{
     background-size: 100%;
 }
 
-#modalButton{
+.modal{
+    position: absolute;
+    top: 0;
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContents{
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Attempt to make modal for instructions */
+/* #modalButton{
     border-radius: 4px;
     background-color:rgb(65, 57, 57);
     color: rgb(161, 84, 75);
 }
 
 .modal{
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
     width: 100%;
-    overflow: auto; /*in case you need to scroll */
-    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modalBody{
-    background-color: white;
-    margin: 20%;
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 6px;
+    text-align: center;
     padding: 20px;
-    width: 70%;
-    box-shadow: 0 5px 8 px 0 gray;
+}
 
-
+.closeButton{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
 
 }
+
+.closeButton:hover, .closeButton:focus{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
 
 pre{
     font-size: 10%;
@@ -99,6 +130,8 @@ pre{
     margin: auto;
 }
 
+
+/* Restart Modal */
 /* .bg-modal {
     width: 100%;
     height: 100%;
