@@ -35,7 +35,7 @@ function computerTurn() {
            return "water"
        }
  }
- //computerTurn() >>> put inside of playerTurn function to run each time player clicks a button
+ 
 
 // function needed for when earth wins = earthScore++
 function earthScores() {
@@ -45,33 +45,22 @@ function earthScores() {
 }
 
 function playerScores(){
-    playerScoreZero++;
-    console.log(playerScoreZero)
-    playerScore.innerHTML = playerScoreZero
+        playerScoreZero++;
+        console.log(playerScoreZero)
+        playerScore.innerHTML = playerScoreZero
 }
 
-// NOTES: 
-// when player selects wind, run computerTurn to have computer select an element; 
-//      if computer selects water, #playerScore ++
-//      if computer selects fire, #earthScore ++
-//      else remains the same
 
-// when player selects water, run computerTurn to have computer select an element; 
-//      if computer selects wind, #playerScore ++
-//      if computer selects fire, #earthScore ++
-//      else remains the same
-
-
-// function entireFunction() { // GOAL: once either score = 3 the person wins/ ends the loop
-//     while(i=0, i<=3, i++){ // while i for either players is <=3 (they need to win 3 out of 5), continue playing
+function entireFunction() { // GOAL: once either score = 3 the person wins/ ends the loop
+    //if(playerScoreZero <= 2 || earthScoreZero <= 2){ // while i for either players is <=3 (they need to win 3 out of 5), continue playing
 
         // player selects either fire
         fireButton.addEventListener("click", function(){
 
             // when player selects fire, run computerTurn to have computer select an element; 
-            // if computer selects water, #earthScore ++
-            // if computer selects wind, #playerScore ++
-            // else remains the same
+            //      if computer selects water, #earthScore ++
+            //      if computer selects wind, #playerScore ++
+            //      else remains the same
            let computerChoice = computerTurn() // need to make computerTurn a variable to call upon the different options below
        
                 if(computerChoice === "water") {
@@ -88,6 +77,11 @@ function playerScores(){
 
         // player selects either wind
         windButton.addEventListener("click", function(){
+
+            // when player selects wind, run computerTurn to have computer select an element; 
+            //      if computer selects water, #playerScore ++
+            //      if computer selects fire, #earthScore ++
+            //      else remains the same
             let computerChoice = computerTurn()
        
             if(computerChoice === "fire") {
@@ -104,6 +98,11 @@ function playerScores(){
 
         // player selects either water
         waterButton.addEventListener("click", function(){
+
+        // when player selects water, run computerTurn to have computer select an element; 
+        //      if computer selects wind, #playerScore ++
+        //      if computer selects fire, #earthScore ++
+        //      else remains the same
             let computerChoice = computerTurn()
        
             if(computerChoice === "wind") {
@@ -116,24 +115,9 @@ function playerScores(){
             }
         console.log("Player clicked water");
         })
-  //  }
-//}
-// entireFunction()
+ }
+entireFunction()
 
-// function playerTurn() { // each time player selects a button
-//     while(i =0, i<=3, i++){ // while player hasn't won 3 out of 5 games 
-//         function selectFire() { //why is this function not declared?
-//             computerTurn()
-//             if(computerTurn === 1){
-//                 console.log(playerScore +1) // connect back to playerScore so it goes up a point if won
-//             }
-            
-
-
-//         }
-//     }
-// }
-// playerTurn()
 
 
   
