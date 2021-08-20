@@ -19,9 +19,10 @@ const close = document.getElementById("close")
 // modal for winning/losing
 let modal = document.querySelector(".modal-bg")
 let winnerOfGame = document.querySelector("#winner")
+const restartButton = document.querySelector(".restart-button")
 
 
-// have player give us their name in order to start the game
+// have player gives their name in order to start the game
 let playerName = document.querySelector(".playerName") // make variable to grab player name
 function playerNameSelect(){ // create a function for player to input their name 
   let newPlayer =  prompt("What's your name?") // create variable for prompt
@@ -57,13 +58,30 @@ function computerTurn() {
        }
  }
  
+ // modal for winning
+function endgame(winner) {
+    if(winner == 1){
+        winnerOfGame.innerHTML = "Player won!"
+    } else{
+        winnerOfGame.innerHTML = "Earth won!"
+    }
+    modal.classList.add("bg-active")
+}
+
+// function for restart button
+restartButton.addEventListener("click", reset)
+    function reset(){
+    window.location.reload()
+}
 
 // when Earth/computer scores:
 function earthScores() {
     earthScoreZero++;
     console.log(earthScoreZero)
     earthScore.innerHTML = earthScoreZero
-
+    if(earthScoreZero == 3){
+        endgame(2)
+    }
 }
 
 // when Player scores:
@@ -71,25 +89,13 @@ function playerScores(){
         playerScoreZero++;
         console.log(playerScoreZero)
         playerScore.innerHTML = playerScoreZero
-        if(playerScoreZero === 3){
+        if(playerScoreZero == 3){
             endgame(1)
-        } else {
-            endgame(2)
-        }
+        } 
 }
 
-// modal for winning
-function endgame(winner) {
-    if(winner == 1){
-        winnerOfGame.innerHTML = playerName + "won!"
-    } else{
-        winnerOfGame.innerHTML = "Earth won!"
-    }
-    modal.classList.add("bg-active")
-}
-
-function entireFunction() { // GOAL: once either score = 3 the person wins/ ends the loop
-    //(playerScoreZero <= 2 || earthScoreZero <= 2){ // while i for either players is <=3 (they need to win 3 out of 5), continue playing
+// Function for playing the game: player clicks on button, computer choice runs in the background & determines who wins
+function entireFunction() { 
 
         // player selects fire
         fireButton.addEventListener("click", function(){
@@ -155,6 +161,13 @@ function entireFunction() { // GOAL: once either score = 3 the person wins/ ends
  }
 entireFunction()
 
+
+
+// attempts made in order to end game: 
+// 1. in entireFunction create "while score is under 3, continue" else if player reaches 3 alert/modal they won or vv
+// 2. function run separately if player or computer scores = 3, alert or modal pops up  
+// 3. use modal to stop the game
+// 4. idea of function to be incorporated: 
 // function win(){
 //     if(earthScoreZero = 3){
 //         alert "Earth won!"
@@ -163,7 +176,3 @@ entireFunction()
 //     }
 // }
 // win()
-
-// attempts made in order to end game: 
-// 1. in entireFunction create "while score is under 3, continue" else if player reaches 3 alert/modal they won or vv
-// 2. function run separately if player or computer scores = 3, alert or modal pops up  

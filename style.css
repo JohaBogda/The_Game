@@ -41,7 +41,7 @@ button{
     padding: 25px;
     border: 3px solid rgb(104, 34, 34);
     transition: 250ms ease-in-out;
-    background-color: black; /*needed for below button*/
+    background-color: rgb(161, 84, 75); /*needed for below button*/
     color: rgb(104, 34, 34); /*needed for below button*/
 }
 
