@@ -35,7 +35,7 @@ Live: http://127.0.0.1:5501/index.html
 ## Improvements
 
 - overall looks/ fill out the space on page
-- get the end to work with a modal to restart the game when won/lost 
+- add for the game to display the result of computer/earth so player knows who won
 - add animations for during the game 
 
   
