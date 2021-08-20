@@ -49,6 +49,7 @@ button:hover{
     border-color:rgb(161, 84, 75);
 }
 
+/* adding images to the buttons */
 #fire{
     background-image: url("fire.jpeg");
     background-size: 100%;
@@ -65,6 +66,7 @@ button:hover{
     background-size: 100%;
 }
 
+/* button to open instructions */
 #open{
     padding: 5px;
     border-radius: 50%;
@@ -72,6 +74,7 @@ button:hover{
     box-shadow: 0 2px 4px rgb(34, 12, 12);
 }
 
+/* Modal for instructions */
 .modal_container {
     background-color: rgba(0,0,0,0.7);
     position: fixed;
@@ -99,13 +102,14 @@ button:hover{
     max-width: 100%; /*to keep it inside the browser's width */
 }
 
+/* Modal text */
 .modal p {
     opacity: 0.5;
 }
 
 
 
-/* Modal */
+/* Modal for when someone's won + restart button */
 .modal-bg{
     position: fixed;
     width: 100%;
