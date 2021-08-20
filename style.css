@@ -65,97 +65,89 @@ button:hover{
     background-size: 100%;
 }
 
-#openButton{
+#open{
     padding: 5px;
     border-radius: 50%;
     font-size: 10px;
     box-shadow: 0 2px 4px rgb(34, 12, 12);
 }
 
-.modal-container {
+.modal_container {
     background-color: rgba(0,0,0,0.7);
     position: fixed;
+    opacity: 0; /*to hide the modal but it's on top of everything */
+    pointer-events: none; /* gives me access to main page again */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .modal {
     background-color: white;
+    border-radius: 2px;
+    padding: 30px 50px;
+    width: 30%;
+    max-width: 100%; /*to keep it inside the browser's width */
 }
 
-/* Attempt to make modal for instructions */
-/* #modalButton{
-    border-radius: 4px;
-    background-color:rgb(65, 57, 57);
-    color: rgb(161, 84, 75);
+.modal p {
+    opacity: 0.5;
 }
 
+
+
+/* Modal */
+.modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0, opacity 0.3s;
+}
+.bg-active{
+    visibility: visible;
+    opacity: 1;
+}
 .modal{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: white;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.modalBody{
-    width: 300px;
-    height: 200px;
-    background-color: gray;
-    border-radius: 6px;
-    text-align: center;
-    padding: 20px;
-}
-
-.closeButton{
-    color: #ccc;
-    float: right;
-    font-size: 30px;
+    flex-direction: column;
 
 }
-
-.closeButton:hover, .closeButton:focus{
+.status{
+ 
+    font-size: 40px;
+}
+.restart-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: white;
+    border-radius: 5px;
     color: white;
-    text-decoration: none;
-    cursor: pointer;
-} */
-
-
-pre{
-    font-size: 10%;
-    border: 3px dashed rgb(161, 84, 75);
-    padding: 5px;
-    width: 20%;
-    margin: auto;
+    font-weight: bold;
+    width: 100px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: burlywood;
 }
 
-
-/* Restart Modal */
-/* .bg-modal {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    width: 300px;
-    height: 200px;
-    background-color: gray;
-    border-radius: 6px;
-    text-align: center;
-    padding: 20px;
-} */
