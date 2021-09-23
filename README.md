@@ -35,6 +35,10 @@ Live: http://127.0.0.1:5501/index.html
 ## Improvements
 
 - overall looks/ fill out the space on page
+<<<<<<< HEAD
+=======
+- add for the game to display the result of computer/earth so player knows who won
+>>>>>>> 71d68ee45617958a681132508f9fe7c4bf6d7dd1
 - add animations for during the game 
 
   
